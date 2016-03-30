@@ -2,13 +2,13 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <header>
-<nav>
-	<ul>
-		<li>Logo</li>
-		<li>Life Block</li>
-		<li>Life Module</li>
-		<li>Login</li>
-		<li>Join</li>
-	</ul>
+<nav id="nav-1">
+    <ul>
+      <li><a class="link-1 left" href="#">Project Sarte</a></li>
+      <li><a class="link-1 left" href="#">라이프 블럭</a></li>
+      <li><a class="link-1 left" href="#">라이프 모듈</a></li>
+      <li><a class="link-1 right" href="#">회원가입</a></li>
+      <li><a class="link-1 right" href="#">로그인</a></li>
+    </ul>
 </nav>
 </header>
