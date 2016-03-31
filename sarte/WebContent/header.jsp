@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="/sarte/css/menu_component.css">
 
 <header>
-<section class="section section--menu" id="Valentine">
+<section class="section--menu" id="Valentine">
 
 	<h2 class="section__title"></h2>
 
