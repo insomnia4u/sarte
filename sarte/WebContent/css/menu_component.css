@@ -23,7 +23,7 @@ a {
 
 
 .menu__list {
-	position: absolute;
+	position: relative;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -1489,7 +1489,7 @@ a {
 	transition: color 0.3s;
 }
 
-.menu--valentine .menu__link .right {
+.menu--valentine .menu__link {
 	position: relative;
 	display: block;
 	min-width: 105px;
@@ -1497,6 +1497,12 @@ a {
 	color: #b5b5b5;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
+	float: right;
+}
+
+.right
+{
+	position: absolute;
 	float: right;
 }
 
