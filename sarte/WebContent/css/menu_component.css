@@ -16,13 +16,14 @@ a {
 /* Common styles for all menus */
 .menu {
 	line-height: 1;
-	margin: 0 auto 3em;
+	margin: 0 auto;
 
 }
 
 
 
 .menu__list {
+	position: relative;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
