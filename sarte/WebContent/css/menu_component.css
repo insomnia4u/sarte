@@ -35,7 +35,7 @@ a {
 
 .menu__item {
 	display: block;
-	margin: 0;
+	margin: 1em 0;
 }
 
 .menu__link {
@@ -1481,7 +1481,7 @@ a {
 /* Valentine */
 .menu--valentine .menu__item {
 	position: relative;
-	margin: 0 1em;
+	margin: 0 5px;
 }
 
 .menu--valentine .menu__link {
