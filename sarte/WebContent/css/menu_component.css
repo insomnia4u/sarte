@@ -23,7 +23,7 @@ a {
 
 
 .menu__list {
-
+	position: relative;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -1475,12 +1475,12 @@ a {
 
 /* Valentine */
 .menu--valentine .menu__item {
-
+	position: relative;
 	margin: 0 1em;
 }
 
 .menu--valentine .menu__link {
-
+	position: relative;
 	display: block;
 	min-width: 105px;
 	text-align: center;
@@ -1490,7 +1490,7 @@ a {
 }
 
 .menu--valentine .menu__link {
-
+	position: relative;
 	display: block;
 	min-width: 105px;
 	text-align: center;
@@ -1502,7 +1502,7 @@ a {
 
 .right
 {
-	
+
 	float: right;
 }
 
