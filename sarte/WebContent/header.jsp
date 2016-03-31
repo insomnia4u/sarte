@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="/sarte/css/menu_component.css">
-<link rel="stylesheet" type="text/css" href="/sarte/css/demo.css">
+
 <header>
 <section class="section section--menu" id="Valentine">
 
