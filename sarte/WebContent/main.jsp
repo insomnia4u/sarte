@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="stylesheet" type="text/css" href="/sarte/css/jquery.fullPage.css">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-<script src="/semi/js/jquery.fullPage.js"></script>
+<script src="/sarte/js/jquery.fullPage.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
