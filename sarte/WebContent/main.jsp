@@ -17,14 +17,10 @@
 <section class="section">
 	<article>
 	
-	<h1></h1>
-	<p id="sub_title">PARK, 주차 예약 서비스</p>
-	<form name="main_find"action="find.jsp">
-	<div id="main_search_bar">
-	<input type="text">
-	<input type="submit" value="검색">
-	</div>
-	</form>
+	<h1>시간을 정복하세요!</h1>
+	<video autoplay loop id="bgvid">
+    <source src="/sarte/video/main2.mp4" type="video/mp4">
+</video>
 	
 	</article>
 </section>
