@@ -10,7 +10,7 @@
 
 	<nav class="menu menu--valentine">
 
-		<ul class="menu__list">
+		<ul class="menu__list left">
 			<li class="menu__item menu__item--current">
 				<a class="menu__link" href="#">SARTE</a>
 			</li>
