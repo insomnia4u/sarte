@@ -23,7 +23,6 @@ a {
 
 
 .menu__list {
-	position: relative;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
