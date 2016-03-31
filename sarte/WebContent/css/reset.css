@@ -42,10 +42,7 @@ q:before, q:after {
    content: '';
    content: none;
 }
-.right
-{
-	float:right;
-}
+
 /* remember to define visible focus styles! 
 :focus {
    outline: ?????;
