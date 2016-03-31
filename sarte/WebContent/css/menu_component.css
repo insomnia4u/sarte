@@ -17,6 +17,7 @@ a {
 .menu {
 	line-height: 1;
 	margin: 0 auto 3em;
+	width: 100%;
 }
 
 .menu__list {
@@ -56,10 +57,7 @@ a {
 	outline: none;
 }
 
-.right
-{
-	float:right;
-}
+
 
 /* Individual styles */
 

@@ -20,10 +20,12 @@
 			<li class="menu__item">
 				<a class="menu__link" href="#">라이프 모듈</a>
 			</li>
-			<li class="menu__item right">
+		</ul>
+		<ul class="menu__list right">
+			<li class="menu__item">
 				<a class="menu__link" href="#">회원 가입</a>
 			</li>
-			<li class="menu__item right">
+			<li class="menu__item">
 				<a class="menu__link" href="#">로그인</a>
 			</li>
 		</ul>
