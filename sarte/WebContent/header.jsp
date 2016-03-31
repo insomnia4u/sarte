@@ -70,5 +70,20 @@
 				});
 			});
 		})(window);
-		</script>
+
+
+$(function(){ 
+    var menupos = $("#Valentine").offset().top; 
+    $(window).scroll(function(){ 
+       if($(window).scrollTop() >= menupos) { 
+          $("#Valentine").addClass('fixed');
+         
+          }
+       else
+       {
+    	   $('#Valentine').removeClass('fixed');
+       }
+    }); 
+ }); 
+ </script>
 </header>
