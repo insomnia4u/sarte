@@ -11,5 +11,8 @@
 </head>
 <body>
 <%@ include file="/header.jsp" %>
+<video autoplay loop id="bgvid">
+    <source src="/sarte/video/main.mp4" type="video/mp4">
+</video>
 </body>
 </html>
