@@ -1,3 +1,18 @@
+@font-face {
+	font-family: 'codropsicons';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+a {
+	text-decoration: none;
+	color: #4e3c3e;
+	outline: none;
+}
+
+
 /* Common styles for all menus */
 .menu {
 	line-height: 1;
@@ -35,9 +50,15 @@
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
 .menu__link:hover,
 .menu__link:focus {
 	outline: none;
+}
+
+.right
+{
+	float:right;
 }
 
 /* Individual styles */

@@ -1,6 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="/sarte/css/menu_component.css">
+<link rel="stylesheet" type="text/css" href="/sarte/css/demo.css">
+<header>
+<section class="section section--menu" id="Valentine">
+
+	<h2 class="section__title"></h2>
+
+	<nav class="menu menu--valentine">
+
+		<ul class="menu__list">
+			<li class="menu__item menu__item--current">
+				<a class="menu__link" href="#">SARTE</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="#">라이프 블럭</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="#">라이프 모듈</a>
+			</li>
+			<li class="menu__item right">
+				<a class="menu__link" href="#">회원 가입</a>
+			</li>
+			<li class="menu__item right">
+				<a class="menu__link" href="#">로그인</a>
+			</li>
+		</ul>
+		
+	</nav>
+
+</section>
 <script src="/sarte/js/classie.js"></script>
 <script src="/sarte/js/clipboard.min.js"></script>
 		<script>
@@ -39,33 +69,4 @@
 			});
 		})(window);
 		</script>
-<header>
-<section class="section section--menu" id="Valentine">
-
-	<h2 class="section__title"></h2>
-
-	<nav class="menu menu--valentine">
-
-		<ul class="menu__list">
-			<li class="menu__item menu__item--current">
-				<a class="menu__link" href="#">SARTE</a>
-			</li>
-			<li class="menu__item">
-				<a class="menu__link" href="#">라이프 블럭</a>
-			</li>
-			<li class="menu__item">
-				<a class="menu__link" href="#">라이프 모듈</a>
-			</li>
-			<li class="menu__item">
-				<a class="menu__link right" href="#">회원 가입</a>
-			</li>
-			<li class="menu__item">
-				<a class="menu__link right" href="#">로그인</a>
-			</li>
-		</ul>
-		
-	</nav>
-
-</section>
-
 </header>
