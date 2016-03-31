@@ -1487,7 +1487,7 @@ a {
 .menu--valentine .menu__link {
 	position: relative;
 	display: block;
-	min-width: 105px;
+	min-width: 80px;
 	text-align: center;
 	color: #b5b5b5;
 	-webkit-transition: color 0.3s;
