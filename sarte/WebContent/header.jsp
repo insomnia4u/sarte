@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <script src="/sarte/js/classie.js"></script>
-<script src="/sartejs/clipboard.min.js"></script>
+<script src="/sarte/js/clipboard.min.js"></script>
 		<script>
 		(function() {
 			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
@@ -48,19 +48,19 @@
 
 		<ul class="menu__list">
 			<li class="menu__item menu__item--current">
-				<a class="menu__link">SARTE</a>
+				<a class="menu__link" href="#">SARTE</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__link">라이프 블럭</a>
+				<a class="menu__link" href="#">라이프 블럭</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__link">라이프 모듈</a>
+				<a class="menu__link" href="#">라이프 모듈</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__link right">회원 가입</a>
+				<a class="menu__link right" href="#">회원 가입</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__link right">로그인</a>
+				<a class="menu__link right" href="#">로그인</a>
 			</li>
 		</ul>
 		
