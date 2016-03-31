@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="/semi/css/jquery.fullPage.css">
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
@@ -30,7 +30,7 @@
 		<p>내용 2</p>
 	</article>
 </section>
-<section class="section" style="height: 800px;">
+<section class="section">
 	<article>
 		<h2>제목 3</h2>
 		<p>내용 3</p>

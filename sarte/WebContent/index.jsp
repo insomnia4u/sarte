@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/sarte/css/reset.css">
-<link rel="stylesheet" type="text/css" href="/sarte/css/main.css">
-
+<link rel="stylesheet" type="text/css" href="/semi/css/jquery.fullPage.css">
 <title>Project SARTE</title> 
 </head>
 <body>
