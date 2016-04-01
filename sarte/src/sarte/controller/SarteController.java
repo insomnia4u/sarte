@@ -24,42 +24,36 @@ public class SarteController extends HttpServlet
 		
 		Properties prop=null;
 		
-		FileInputStream fis;
-		try {
-			fis = new FileInputStream(path);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		prop=new Properties();
-		try {
-			prop.load(fis);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
+		try {
+			FileInputStream fis=new FileInputStream(path);
+		
+		prop=new Properties();
+		
+			prop.load(fis);
+		}catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		Iterator keys=prop.keySet().iterator();
 		while(keys.hasNext())
 		{
 			String key=(String)keys.next();
 			String classPath=prop.getProperty(key);
 			
-			Class obj_class;
+			
 			try {
-				obj_class = Class.forName(classPath);
+				Class obj_class = Class.forName(classPath);
+				Object obj = obj_class.newInstance();
+				commandMap.put(key, obj);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-			Object obj;
-			try {
-				obj = obj_class.newInstance();
-			} catch (InstantiationException | IllegalAccessException e) {
+			}catch (InstantiationException | IllegalAccessException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			commandMap.put(key, obj);
+			
 		}
 	}
 	
