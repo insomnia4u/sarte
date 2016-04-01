@@ -43,8 +43,8 @@ public class SarteController extends HttpServlet
 			
 			
 			try {
-				Class obj_class = Class.forName(classPath);
-				Object obj = obj_class.newInstance();
+				Class obj_class=Class.forName(classPath);
+				Object obj=obj_class.newInstance();
 				commandMap.put(key, obj);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
