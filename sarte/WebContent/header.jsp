@@ -23,7 +23,7 @@
 		</ul>
 		<ul class="menu__list right">
 			<li class="menu__item">
-				<a class="menu__link" href="#">회원 가입</a>
+				<a class="menu__link" href="/sarte/user/join.jsp">회원 가입</a>
 			</li>
 			<li class="menu__item">
 				<a class="menu__link" href="#">로그인</a>
