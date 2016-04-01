@@ -1489,7 +1489,7 @@ a {
 	display: block;
 	min-width: 105px;
 	text-align: center;
-	color: #b5b5b5;
+	color: #F2F2F2;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
@@ -1499,7 +1499,7 @@ a {
 	display: block;
 	min-width: 105px;
 	text-align: center;
-	color: #b5b5b5;
+	color: #F2F2F2;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 	float: right;
@@ -1513,11 +1513,11 @@ a {
 
 .menu--valentine .menu__link:hover,
 .menu--valentine .menu__link:focus {
-	color: #929292;
+	color: #FFC101;
 }
 
 .menu--valentine .menu__item--current .menu__link {
-	color: #d94f5c;
+	color: #FF9E00;
 }
 
 .menu--valentine .menu__item::before,
@@ -1526,7 +1526,7 @@ a {
 .menu--valentine .menu__link::after {
 	content: '';
 	position: absolute;
-	background: #d94f5c;
+	background: #FF9E00;
 	-webkit-transform-origin: 350% 350%;
 	transform-origin: 350% 350%;
 	-webkit-transition: -webkit-transform 0.5s;

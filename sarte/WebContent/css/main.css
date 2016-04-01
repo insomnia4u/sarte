@@ -15,3 +15,36 @@ video#bgvid {
     background: url(polina.jpg) no-repeat;
     background-size: cover; 
 }
+
+#index p
+{
+	text-align: center;
+}
+
+
+#index h1 {
+	display:block;
+	text-align:center;
+	font-weight: 200;
+	font-size: 5em;
+	margin-bottom: 0;
+	vertical-align: middle;
+	color: #FFFFFF;
+}
+#index h2{
+	display: block;
+	font-size: 150%;
+	letter-spacing: 0;
+	padding-top:20px;
+	padding-bottom:20px;
+	color: #f8f3f8;
+	text-align: center;
+}
+
+.main-button-container
+{
+	width: 40%;
+	margin:0px auto;
+
+	
+}
