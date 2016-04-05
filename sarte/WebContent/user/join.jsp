@@ -5,14 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/sarte/css/reset.css">
 <link rel="stylesheet" type="text/css" href="/sarte/css/textinput.css">
 <link rel="stylesheet" type="text/css" href="/sarte/css/buttons.css">
 <link rel="stylesheet" type="text/css" href="/sarte/css/main.css">
-<link rel="stylesheet" type="text/css" href="/sarte/css/reset.css">
 </head>
-<body>
+<body class="section">
 <%@ include file="/header.jsp" %>
-	<section class="content bgcolor-5">
+	<section class="content_wrapper">
+		<section class="contnet">
 		<h2>회원가입</h2>
 		<div class="input input--minoru">
 			<input class="input__field input__field--yoko" type="text"/>
@@ -44,7 +45,11 @@
 				<span class="input__label-content input__label-content--yoko">핸드폰 번호</span>
 			</label>
 		</div>
+		</section>
 </section>
 <%@ include file="/footer.jsp" %>
 </body>
+<script>
+$('#m_join').addClass('menu__item--current');
+</script>
 </html>

@@ -44,11 +44,10 @@
 <title>Project SARTE</title> 
 </head>
 <body>
+<%@ include file="/header.jsp" %>
 	<video autoplay loop id="bgvid">
     <source src="/sarte/video/main2.mp4" type="video/mp4">
-</video>
-<%@ include file="/header.jsp" %>
-
+	</video>
 <section id="index">
 <article>
 
@@ -57,8 +56,8 @@
 			
 </article>
 <div class="box bg-1 main-button-container">
-<button class="button button--wayra button--border-thick button--text-upper button--size-s" onclick="location.href='/sarte/footer.jsp'">시작하기</button>
-<button class="button button--wayra button--border-thick button--text-upper button--size-s" onclick="location.href='/sarte/footer.jsp'">가입하기</button>
+<button class="button button--wayra button--border-thick button--text-upper button--size-s" onclick="location.href='/sarte/lblock.jsp'">시작하기</button>
+<button class="button button--wayra button--border-thick button--text-upper button--size-s" onclick="location.href='/sarte/user/join.jsp'">가입하기</button>
 </div>
 </section>
 

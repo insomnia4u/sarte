@@ -23,10 +23,10 @@
 		</ul>
 		<ul class="menu__list right">
 			<li class="menu__item">
-				<a class="menu__link" href="/sarte/user/join.jsp">회원 가입</a>
+				<a class="menu__link" id="m_join" onclick="location.href='/sarte/user/join.jsp'">회원 가입</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__link" href="#">로그인</a>
+				<a class="menu__link" href="htpp://www.nvaer.com">로그인</a>
 			</li>
 		</ul>
 		
@@ -40,7 +40,7 @@
 			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
 				var menuItems = menu.querySelectorAll('.menu__link'),
 					setCurrent = function(ev) {
-						ev.preventDefault();
+						
 
 						var item = ev.target.parentNode; // li
 
@@ -60,7 +60,7 @@
 			});
 
 			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
-				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '/' + link.parentNode.id);
 				new Clipboard(link);
 				link.addEventListener('click', function() {
 					classie.add(link, 'link-copy--animate');

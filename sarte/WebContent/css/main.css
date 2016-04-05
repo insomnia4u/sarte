@@ -12,7 +12,7 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
+    background: no-repeat;
     background-size: cover; 
 }
 
@@ -47,7 +47,19 @@ video#bgvid {
 	margin:0px auto;
 }
 
-section
+.section
 {
-	background: #D9650B;	
+	background: #E8990C;	
+}
+
+.content_wrapper
+{
+	padding-top: 100px;
+	
+}
+
+.content
+{
+	width:200px;
+	margin:0px auto;
 }
