@@ -12,7 +12,7 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: no-repeat;
+    background: url(polina.jpg) no-repeat;
     background-size: cover; 
 }
 
@@ -20,7 +20,6 @@ video#bgvid {
 {
 	text-align: center;
 }
-
 
 #index h1 {
 	display:block;
@@ -47,19 +46,49 @@ video#bgvid {
 	margin:0px auto;
 }
 
-.section
+.content
 {
-	background: #E8990C;	
+	background: #FF9E00;
+
 }
 
-.content_wrapper
+.m_content
 {
-	padding-top: 100px;
+	padding-top: 70px;
+	width: 960px;
+	margin: 0px auto;
+}
+.joincontent
+{
+	width: 480px;
+	margin: 0px auto;
+}
+.menu_title
+{
+	font-size:300%;
+	font-weight: bold;
+	color: #f2f2f2;
+	padding-top:20px;
+	padding-bottom: 20px;
+}
+footer p
+{
+	text-align: center;
+	color: #f2f2f2;
+	clear: both;
+}
+
+.box2
+{
+	width: 480px;
+	margin: 0px auto;
+	display: block;
+	height: 100px;
+	background: #FF9E00;
 	
 }
 
-.content
+.box2 button
 {
-	width:200px;
-	margin:0px auto;
+	width: 205px;
 }

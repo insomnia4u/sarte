@@ -12,21 +12,21 @@
 
 		<ul class="menu__list left">
 			<li class="menu__item menu__item--current">
-				<a class="menu__link" href="#">SARTE</a>
+				<a class="menu__link" id="home" href="/sarte/index.jsp">SARTE</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__link" href="#">라이프 블럭</a>
+				<a class="menu__link" id="block" href="#">라이프 블럭</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__link" href="#">라이프 모듈</a>
+				<a class="menu__link" id="module" href="#">라이프 모듈</a>
 			</li>
 		</ul>
 		<ul class="menu__list right">
 			<li class="menu__item">
-				<a class="menu__link" id="m_join" onclick="location.href='/sarte/user/join.jsp'">회원 가입</a>
+				<a class="menu__link" id="join" href="joinForm.sarte">회원 가입</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__link" href="htpp://www.nvaer.com">로그인</a>
+				<a class="menu__link" id="login" href="loginForm.sarte">로그인</a>
 			</li>
 		</ul>
 		
@@ -60,7 +60,7 @@
 			});
 
 			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
-				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '/' + link.parentNode.id);
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
 				new Clipboard(link);
 				link.addEventListener('click', function() {
 					classie.add(link, 'link-copy--animate');

@@ -229,15 +229,15 @@
 }
 .button--wayra:hover {
 	color: #fff;
-	border-color: #E8820C;
+	border-color: #7F3B06;
 }
 .button--wayra.button--inverted:hover {
-	color: #E8820C;
+	color: #7F3B06;
 	border-color: #fff;
 }
 .button--wayra:hover::before {
 	opacity: 1;
-	background-color: #E8820C;
+	background-color: #7F3B06;
 	-webkit-transform: rotate3d(0, 0, 1, 0deg);
 	transform: rotate3d(0, 0, 1, 0deg);
 	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
