@@ -92,3 +92,18 @@ footer p
 {
 	width: 205px;
 }
+
+.box3
+{
+	width: 480px;
+	margin: 0px auto;
+	display: block;
+	height: 100px;
+	background: #FF9E00;
+	
+}
+
+.box3 button
+{
+	width: 460px;
+}

@@ -10,55 +10,69 @@ import javax.servlet.http.HttpSession;
 
 import satre.command.CmdHandler;
 
-public class LoginAction implements CmdHandler {
+public class LoginFBAction implements CmdHandler {
 
 	@Override
 	public String process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		String userId=req.getParameter("id");
-		String userPw=req.getParameter("pw");
-		String msg=null;
-		String url="";
+		String id=req.getParameter("fid");
+		String pw=req.getParameter("fid");
+		String name=req.getParameter("name");
+		String imgpath=req.getParameter("imgpath");
+		String email=req.getParameter("email");
 		
 		UserDAO dao=new UserDAO();
+		UserDTO dto=new UserDTO();
 		
-		int result=dao.loginCheck(userId, userPw);
+		String msg="";
+		String url="";
 		
-		UserDTO dto=dao.getUserInfo(userId);
+	
+		int res=dao.loginCheck(id, pw);
 		
 		HttpSession session=req.getSession();
 		
 		boolean act=true;
 		
-		if(result==dao.LOGIN_OK)
+		if(res==dao.LOGIN_OK)
 		{
+			dto.setId(id);
+			dto.setPw(pw);
+			dto.setName(name);
+			dto.setImgpath(imgpath);
+			dto.setEmail(email);
+			
 			session.setAttribute("dto", dto);
-			msg="로그인 성공<br>"+userId+"님 환영합니다.";
+			msg="로그인 성공<br>"+name+"님 환영합니다.";
 			url="/sarte/index.jsp";
+			
 		}
-		else if(result==dao.ID_INCORRECT)
+		else if(res==dao.ID_INCORRECT)
 		{
-			msg="없는 아이디입니다.<br>"+"아이디를 확인해주세요.";
+			
+			msg="없는 아이디입니다.<br>"+"새로 가입처리 되었습니다.";
+			dto.setId(id);
+			dto.setPw(pw);
+			dto.setName(name);
+			dto.setImgpath(imgpath);
+			dto.setEmail(email);
+			int result=dao.joinUser(dto);
 			url="loginForm.sarte";
 		}
-		else if(result==dao.PW_INCORRECT)
-		{
-			msg="비밀번호가 일치하지 않습니다.<br>비밀번호를 확인해주세요.";
-			url="loginForm.sarte";
-		}
-		else if(result==dao.ERROR)
+		else if(res==dao.ERROR)
 		{
 			msg="알수 없는 에러가 발생했습니다.<br>고객센터로 문의해주세요.";
 			url="loginForm.sarte";
 		}
 		
 		req.setAttribute("msg", msg);
-		req.setAttribute("id", userId);
-		req.setAttribute("pw", userPw);
+		req.setAttribute("id", id);
+		req.setAttribute("pw", pw);
 		req.setAttribute("act", act);
 		req.setAttribute("url", url);
 		
 		return "loginForm.sarte";
+		
 	}
 
 }

@@ -36,10 +36,10 @@
 		</c:when>
 		<c:otherwise>
 			<li class="menu__item" id="logout">
-				<a class="menu__link"  href="logout.sarte">로그아웃</a>
+				<a class="menu__link" onclick="FB.logout()" href="logout.sarte">로그아웃</a>
 			</li>
 			<li class="menu__item"  id="myPage">
-				<a class="menu__link" href="#">${sessionScope.dto.name} 님 환영합니다.</a>
+				<a class="menu__link" id="status" href="#">${sessionScope.dto.name} 님 환영합니다.</a>
 			</li>
 		</c:otherwise>
 		</c:choose>
@@ -65,4 +65,79 @@ $(function(){
     }); 
  }); 
  </script>
+ <script id="facebook-jssdk" async src="//connect.facebook.net/ko_KR/all.js#xfbml=1"></script>
+      <script>
+      // 로그인
+      var fabceloginChk = 0;
+      function loginFB(){
+         if(fabceloginChk == 0){ 
+            FB.login(function(response) {
+               if (response.authResponse) {
+   					document.location.reload();
+                   fabceloginChk  = 1;
+                   
+               }else{   
+                  alert('로그인에 실패했습니다!');
+                  fabceloginChk  = 0;
+                   }
+              }
+          ,{scope: "user_about_me,email,user_birthday"} 
+         );
+      }
+   }
+      
+      //SDK 설정
+      window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '1313822138632979', // 앱 ID
+              status     : true,          // 로그인 상태를 확인
+              cookie     : true,          // 쿠키허용
+              xfbml      : true           // parse XFBML
+            });
+            
+            FB.Event.subscribe('auth.logout', function(response) {
+               document.location.reload();
+            });
+            
+            // 추가적인 코드는 여기에 작성해주세요.
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    FB.api('/me', function(user) {
+                        if (user) {
+                            var imgpath = document.getElementById('imgpath');
+                            imgpath.value='http://graph.facebook.com/' + user.id + '/picture';
+                            var name = document.getElementById('name');
+                            name.value = user.name;
+                            var id = document.getElementById('id');
+                            id.value = user.id;
+                            var email = document.getElementById('email');
+                            email.value = user.email;
+                            document.forms['f1'].submit();
+                            
+                        }
+                    });    
+                     
+                } else if (response.status === 'not_authorized') {
+                	 
+                } else {
+                
+                }
+            });
+            
+/*             FB.Event.subscribe('auth.login', function(response) {
+                
+            }); */
+            
+          };
+          
+      
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
+</script>
 </header>

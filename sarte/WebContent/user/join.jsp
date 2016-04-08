@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +68,7 @@
 			</label>
 		</div>
 		</div>
-		<div class="box2 bg-1">
+		<div class="box2">
 		<button type="submit" class="md-trigger button button--wayra button--border-thick button--text-upper button--size-s">가입하기</button>
 		<button type="reset" class="button button--wayra button--border-thick button--text-upper button--size-s" >다시 작성</button>
 
@@ -86,19 +86,19 @@
 			</div>
 		</div>
 		</c:when>
-		<c:when test="${requestScope.act }==false">
+		<c:when test="${requestScope.res<=0}">
 		<div class="md-show md-modal md-effect-16" id="modal-16">
 			<div class="md-content">
 				<h3>회원 가입 실패</h3>
 				<div>
 					<p>${requestScope.joinMsg}</p>
-					<button class="md-close">닫기</button>
+					<button class="md-close" onclick="location.href='joinForm.sarte'">닫기</button>
 				</div>
 			</div>
 		</div>	
 		</c:when>
 		</c:choose>
-				<div class="md-overlay"></div><!-- the overlay element -->
+<div class="md-overlay"></div><!-- the overlay element -->
 
 	
 		
