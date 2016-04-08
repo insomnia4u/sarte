@@ -9,4 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+   <servlet>
+  <servlet-name>sarteController</servlet-name>
+  <servlet-class>sarte.controller.SarteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>sarteController</servlet-name>
+ <url-pattern>*.sarte</url-pattern>
+  </servlet-mapping>
 </web-app>

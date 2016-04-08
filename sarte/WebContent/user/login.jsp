@@ -1,18 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Title</title>
-<link rel="stylesheet" type="text/css" href="/sarte/css/textinput.css">
-<link rel="stylesheet" type="text/css" href="/sarte/css/buttons.css">
-<link rel="stylesheet" type="text/css" href="/sarte/css/main.css">
 <link rel="stylesheet" type="text/css" href="/sarte/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/sarte/css/main.css">
+<link rel="stylesheet" type="text/css" href="/sarte/css/buttons.css">
+<link rel="stylesheet" type="text/css" href="/sarte/css/textinput.css">
+<link rel="stylesheet" type="text/css" href="/sarte/css/component.css" />
 </head>
 <body>
 <body class="content">
 <%@ include file="/header.jsp" %>
+
 	<section class="m_content">
 	
 		<h2 class="menu_title">로그인</h2>
@@ -27,18 +30,52 @@
 		</div>
 		<br>
 		<div class="input input--minoru">
-			<input class="input__field input__field--yoko" id="pw" name="pw" type="password" /> <label
+			<input class="input__field input__field--yoko" id="pw" name="pw" type="password" value="${requestScope.pw }" /> <label
 				class="input__label input__label--yoko" for="input-17"> <span
 				class="input__label-content input__label-content--yoko">비밀번호</span>
 			</label>
 		</div>
 		<p id="varify"></p>
-		${requestScope.msg}
-		<button type="submit" class="button button--wayra button--border-thick button--text-upper button--size-s">로그인</button>
+		
+		<button type="submit" data-modal="modal-16" class="md-trigger button button--wayra button--border-thick button--text-upper button--size-s">로그인</button>
 		</div>
 		</form>
+		<script>
+		</script>
+		<c:if test="${requestScope.act}">
+			<div class="md-show md-modal md-effect-16" id="modal-16">
+			<div class="md-content">
+				<h3>로그인</h3>
+				<div>
+					<p>
+					${requestScope.msg}
+					</p>
+					<button class="md-close" onclick="location.href='/sarte/index.jsp';">확인!</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="md-overlay"></div><!-- the overlay element -->
+
+		<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+		<script src="/sarte/js/classie.js"></script>
+		<script src="/sarte/js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="/sarte/js/cssParser.js"></script>
+		<script src="/sarte/js/css-filters-polyfill.js"></script>
+		
+		</c:if>
 	</section>	
 </body>
+<script>
+		$('#login').addClass('menu__item--current');
+</script>
 <script>
 			(function() {
 				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
@@ -95,6 +132,6 @@
 			
 			
 		</script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+
 </html>
