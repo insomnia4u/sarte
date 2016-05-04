@@ -114,12 +114,9 @@ $('#join').addClass('menu__item--current');
 
 		<!-- for the blur effect -->
 		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
-		<script>
-			// this is important for IEs
-			var polyfilter_scriptpath = '/js/';
-		</script>
+
 		<script src="/sarte/js/cssParser.js"></script>
-		<script src="/sarte/js/css-filters-polyfill.js"></script>
+
 
 <script>
 			(function() {

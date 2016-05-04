@@ -42,12 +42,16 @@ var ModalEffects = (function() {
 					}, 25 );
 				}
 			});
+			
+			
 
 			close.addEventListener( 'click', function( ev ) {
 				ev.stopPropagation();
 				removeModalHandler();
 			});
-
+			
+		
+			
 		} );
 
 	}

@@ -34,7 +34,7 @@ public class LoginAction implements CmdHandler {
 		{
 			session.setAttribute("dto", dto);
 			msg="로그인 성공<br>"+userId+"님 환영합니다.";
-			url="/sarte/index.jsp";
+			url="/index.jsp";
 		}
 		else if(result==dao.ID_INCORRECT)
 		{

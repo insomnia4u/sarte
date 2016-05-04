@@ -44,7 +44,7 @@ public class LoginFBAction implements CmdHandler {
 			
 			session.setAttribute("dto", dto);
 			msg="로그인 성공<br>"+name+"님 환영합니다.";
-			url="/sarte/index.jsp";
+			url="index.jsp";
 			
 		}
 		else if(res==dao.ID_INCORRECT)
@@ -70,8 +70,9 @@ public class LoginFBAction implements CmdHandler {
 		req.setAttribute("pw", pw);
 		req.setAttribute("act", act);
 		req.setAttribute("url", url);
+		req.setAttribute("res", res);
 		
-		return "loginForm.sarte";
+		return url;
 		
 	}
 

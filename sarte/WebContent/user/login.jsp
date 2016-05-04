@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		</c:if>
-	
+		
 
 		<div class="md-overlay"></div><!-- the overlay element -->
 
@@ -70,12 +70,9 @@
 
 		<!-- for the blur effect -->
 		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
-		<script>
-			// this is important for IEs
-			var polyfilter_scriptpath = '/js/';
-		</script>
+	
 		<script src="/sarte/js/cssParser.js"></script>
-		<script src="/sarte/js/css-filters-polyfill.js"></script>
+
 		
 
 	</section>	
@@ -144,6 +141,10 @@
 			})();
 			
 			
-		</script>
+		var fid=document.getElementById("id");
+		
+	
 
+		</script>
+  
 </html>
