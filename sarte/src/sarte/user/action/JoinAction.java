@@ -51,7 +51,6 @@ public class JoinAction implements CmdHandler {
 		req.setAttribute("joinMsg", msg);
 		req.setAttribute("act", act);
 		req.setAttribute("dto", dto);
-		req.setAttribute("res", res);
 		
 		return "/user/join.jsp";
 	}

@@ -18,7 +18,6 @@ public class LoginAction implements CmdHandler {
 		String userId=req.getParameter("id");
 		String userPw=req.getParameter("pw");
 		String msg=null;
-		String url="";
 		
 		UserDAO dao=new UserDAO();
 		
@@ -34,31 +33,32 @@ public class LoginAction implements CmdHandler {
 		{
 			session.setAttribute("dto", dto);
 			msg="로그인 성공<br>"+userId+"님 환영합니다.";
+<<<<<<< master
 			url="/index.jsp";
+=======
+			
+						
+>>>>>>> 33cdcea 0408 v2
 		}
 		else if(result==dao.ID_INCORRECT)
 		{
 			msg="없는 아이디입니다.<br>"+"아이디를 확인해주세요.";
-			url="loginForm.sarte";
 		}
 		else if(result==dao.PW_INCORRECT)
 		{
 			msg="비밀번호가 일치하지 않습니다.<br>비밀번호를 확인해주세요.";
-			url="loginForm.sarte";
 		}
 		else if(result==dao.ERROR)
 		{
 			msg="알수 없는 에러가 발생했습니다.<br>고객센터로 문의해주세요.";
-			url="loginForm.sarte";
 		}
 		
 		req.setAttribute("msg", msg);
 		req.setAttribute("id", userId);
 		req.setAttribute("pw", userPw);
 		req.setAttribute("act", act);
-		req.setAttribute("url", url);
 		
-		return "loginForm.sarte";
+		return "/user/login.jsp";
 	}
 
 }

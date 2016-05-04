@@ -18,8 +18,6 @@ public class LogoutAction implements CmdHandler {
 		
 		session.invalidate();
 		
-		
-		
 		return "index.jsp";
 	}
 
