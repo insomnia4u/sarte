@@ -19,7 +19,7 @@
 	<section class="m_content">
 	
 		<h2 class="menu_title">로그인</h2>
-		<form name="join_f" action="login.sarte"> 
+		<form name="login_f" action="login.sarte" method="post"> 
 		<div class="joincontent">
 		<div class="input input--minoru">
 			<input class="input__field input__field--yoko" id="userid" name="id" type="text" value="${requestScope.id}" /> <label
@@ -36,12 +36,17 @@
 			</label>
 		</div>
 		<p id="varify"></p>
-		
+		<div class="box2">
 		<button type="submit" data-modal="modal-16" class="md-trigger button button--wayra button--border-thick button--text-upper button--size-s">로그인</button>
+		<button type="button" data-modal="modal-16" class="md-trigger button button--wayra button--border-thick button--text-upper button--size-s" onclick="loginFB()">페이스북 로그인</button>
+
+		
+		</div>
 		</div>
 		</form>
 		<script>
 		</script>
+
 		<c:if test="${requestScope.act}">
 			<div class="md-show md-modal md-effect-16" id="modal-16">
 			<div class="md-content">
@@ -50,15 +55,12 @@
 					<p>
 					${requestScope.msg}
 					</p>
-					<button class="md-close" onclick="location.href='/sarte/index.jsp';">확인!</button>
+					<button class="md-close" onclick="location.href='${requestScope.url}';">확인!</button>
 				</div>
 			</div>
 		</div>
-<<<<<<< master
 		</c:if>
 		
-=======
->>>>>>> 33cdcea 0408 v2
 
 		<div class="md-overlay"></div><!-- the overlay element -->
 
@@ -72,8 +74,14 @@
 		<script src="/sarte/js/cssParser.js"></script>
 
 		
-		</c:if>
+
 	</section>	
+<form name="f1" action="loginFB.sarte">
+<input type="hidden" name="fid" id="id">	
+<input type="hidden" name="email" id="email">
+<input type="hidden" name="imgpath" id="imgpath">
+<input type="hidden" name="name" id="name">
+</form>
 </body>
 <script>
 		$('#login').addClass('menu__item--current');
@@ -137,10 +145,6 @@
 		
 	
 
-<<<<<<< master
 		</script>
   
-=======
-
->>>>>>> 33cdcea 0408 v2
 </html>

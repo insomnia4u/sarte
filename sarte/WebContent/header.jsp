@@ -37,10 +37,10 @@
 		</c:when>
 		<c:otherwise>
 			<li class="menu__item" id="logout">
-				<a class="menu__link"  href="logout.sarte">로그아웃</a>
+				<a class="menu__link" onclick="FB.logout()" href="logout.sarte">로그아웃</a>
 			</li>
 			<li class="menu__item"  id="myPage">
-				<a class="menu__link" href="#">${sessionScope.dto.name} 님 환영합니다.</a>
+				<a class="menu__link" id="status" href="#">${sessionScope.dto.name} 님 환영합니다.</a>
 			</li>
 		</c:otherwise>
 		</c:choose>
@@ -66,7 +66,6 @@ $(function(){
     }); 
  }); 
  </script>
-<<<<<<< master
 
    <script>
   
@@ -166,6 +165,4 @@ $(function(){
    
            
 </script>
-=======
->>>>>>> 33cdcea 0408 v2
 </header>
